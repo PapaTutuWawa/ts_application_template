@@ -1,0 +1,22 @@
+{
+  "name": "ts_application_template",
+  "version": "0.0.1",
+  "description": "A template for an application using TypeScript",
+  "main": "bin/main.js",
+
+  "dependencies": {
+    "typescript": "^2.1.4",
+    "typings": "^2.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0"
+  },
+
+  "scripts": {
+    "test": "npm run build && mocha bin/test/",
+    "build": "tsc",
+    "postinstall": "typings install"
+  },
+  "author": "Alexander 'Polynomdivision'",
+  "license": "ISC"
+}

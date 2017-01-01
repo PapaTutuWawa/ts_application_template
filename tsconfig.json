@@ -1,0 +1,12 @@
+{
+	"compilerOptions": {
+		"target": "ES6",	
+		"outDir": "bin",
+		"noImplicitAny": true
+	},
+	"exclude": [
+		"node_modules",
+		"typings",
+		"bin"
+	]
+}
