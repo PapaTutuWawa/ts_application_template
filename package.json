@@ -29,6 +29,5 @@
     "build:tests": "tsc -p tests/",
     "build": "npm run clean && npm run build:bin && npm run build:tests"
   },
-  "author": "Alexander 'Polynomdivision'",
-  "license": "ISC"
+  "author": "Alexander 'Polynomdivisi" 
 }
