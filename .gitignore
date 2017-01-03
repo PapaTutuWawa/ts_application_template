@@ -1,11 +1,9 @@
 # Ignore npm
 node_modules/
 
-# Typings definitions
-typings/
-
 # Any log files
 **/*.log
 
 # The transpiled JavaScript
-bin/
+lib/
+js_test/
