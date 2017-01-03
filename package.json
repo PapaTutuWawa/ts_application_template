@@ -4,7 +4,7 @@
   "description": "A template for an application using TypeScript",
   "main": "./lib/cli.js",
   "bin": {
-    "ts-template": "./bin/ts-test"
+   "ts-template": "./bin/ts-template"
   },
 
   "dependencies": { 
