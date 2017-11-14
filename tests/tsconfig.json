@@ -1,7 +1,10 @@
 {
-	"compilerOptions": {
-		"target": "ES6",	
-		"outDir": "../js_test",
-		"noImplicitAny": true
+	  "compilerOptions": {
+        "target": "ES6",
+        "module": "CommonJS",
+		    "outDir": "../dist/tests/",
+		    "noImplicitAny": true,
+        "sourceMap": true,
+        "removeComments": true
 	}
 }
