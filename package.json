@@ -2,32 +2,34 @@
     "name": "ts_application_template",
     "version": "0.0.1",
     "description": "A template for writing an application in TypeScript",
-    "main": "./lib/cli.js",
+    "main": "./dist/template.js",
     "bin": {
         "uback": "./bin/example"
     },
     "devDependencies": {
+        "@commitlint/cli": "^5.2.8",
         "@types/mocha": "^2.2.35",
         "@types/node": "^6.0.55",
+        "husky": "^0.14.3",
         "mocha": "^3.2.0",
         "rimraf": "^2.5.4",
+        "ts-loader": "^3.2.0",
+        "tslint": "^5.8.0",
+        "tslint-loader": "^3.5.3",
         "typescript": "^2.1.4",
-        "tslint": "^5.8.0"
+        "webpack": "^3.10.0",
+        "webpack-node-externals": "^1.6.0"
     },
     "scripts": {
-        "clean:bin": "rimraf dist/lib/",
-        "clean:tests": "rimraf dist/tests/",
-        "clean": "npm run clean:bin && npm run clean:tests",
-
-        "build:bin": "tsc -p src/",
-        "build:tests": "tsc -p tests/",
-
+        "commitmsg": "commitlint -e $GIT_PARAMS",
+        "clean": "rimraf dist/",
+        "build:bin": "webpack",
+        "build:tests": "webpack --config webpack.config.test.js",
         "lint:bin": "tslint -c tslint.json 'src/**/*.ts'",
         "lint:tests": "tslint -c tslint.json 'tests/**/*.ts'",
         "lint": "npm run lint:bin && npm run lint:tests",
-
-        "build": "npm run clean:bin && npm run lint:bin && npm run build:bin",
-        "test": "npm run clean:tests && npm run lint:tests && npm run build:tests && mocha --recursive ./dist/tests/"
+        "build": "npm run build:bin",
+        "test": "npm run build:tests && mocha dist/test.js"
     },
     "author": "Alexander 'Polynomdivision'"
 }
